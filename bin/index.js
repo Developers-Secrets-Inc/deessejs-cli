@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { giget } from 'giget'
+import giget from 'giget'
 import prompts from 'prompts'
 import { execa } from 'execa'
 import { existsSync } from 'fs'
