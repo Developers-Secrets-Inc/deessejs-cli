@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import giget from 'giget'
+import { download } from "giget";
 import prompts from 'prompts'
 import { execa } from 'execa'
 import { existsSync } from 'fs'
@@ -27,7 +27,7 @@ async function main() {
   console.log(`📦 Creating project "${projectName}"...`)
 
   // Clone du template
-  await giget('github:DevelopersSecrets/DeesseJS', {
+  await download('github:DevelopersSecrets/DeesseJS', {
     dir: projectName,
     force: true,
   })
